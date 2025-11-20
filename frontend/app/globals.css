@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background-color: #0b1224;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #e2e8f0;
+  background: radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.12), transparent 25%),
+    radial-gradient(circle at 80% 0%, rgba(236, 72, 153, 0.12), transparent 25%),
+    #0b1224;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.card {
+  @apply rounded-xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/30;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-lg bg-accent px-4 py-2 font-semibold text-slate-900 transition hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-accent;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center rounded-lg border border-accent px-4 py-2 font-semibold text-accent transition hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-accent;
+}
+
+input,
+select,
+textarea {
+  @apply w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-400 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40;
+}
+
+label {
+  @apply block text-sm font-medium text-slate-200 mb-1;
+}
+
+section + section {
+  @apply mt-8;
+}
